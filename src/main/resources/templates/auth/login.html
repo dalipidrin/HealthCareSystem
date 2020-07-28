@@ -34,33 +34,15 @@
 </head>
 
 <body>
-<!--<div class="container">
-    <div class="alert alert-danger" role="alert" th:if="${param.error}">
-        The email or password is incorrect!
-    </div>
-    <form th:action="@{/login}" method="post" >
-        <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
-        <label for="username" class="sr-only">Username</label>
-        <input type="text" id="username" name="username" class="form-control" placeholder="username" required autofocus>
-        <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="remember-me" /> Remember me
-            </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <div class="margin-top20 text-center"> Don't have an account? <a th:href="@{/register}">Create an account</a></div>
-    </form>
-</div>-->
+
 
 
 <div class="limiter">
-    <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+    <div class="container-login100" style="background-image: url('images/hospital.jpg');">
         <div class="wrap-login100">
             <form class="login100-form validate-form"  th:action="@{/login}" method="post">
 					<span class="login100-form-logo">
-						<i class="zmdi zmdi-landscape"></i>
+						<img style="width: 70px;height: 70px;"  th:src="@{/images/loginHospital.png}"/>
 					</span>
 
                 <span class="login100-form-title p-b-34 p-t-27">

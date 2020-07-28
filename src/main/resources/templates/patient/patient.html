@@ -1,25 +1,4 @@
-<!--<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Home</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
-</head>
-<body>
-<div class="container">
-    <h2>Hi <span th:utext="${userName}"></span>, this is the home page.</h2>
-  &lt;!&ndash;  <a th:href="@{/patientData}">Fill your personal data</a><br>&ndash;&gt;
-  &lt;!&ndash;  <a href="http://localhost:8081/patientData">Fill your personal data</a>&ndash;&gt;
-    <a th:href="@{/patientData}">Fill your personal data</a><br>
-    <a th:href="@{/listOfDoctors}">Create appointment</a><br>
-    <a th:href="@{/patientAppointments}">My appointments</a><br>
-    <a th:href="@{/logout}">Sign out</a>
-</div>
-</body>
-</html>-->
+
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -140,7 +119,7 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link" href="charts.html" th:href="@{/bookappointment}">
+            <a class="nav-link" id="bookAppointment" href="charts.html" th:href="@{/bookappointment}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Book appointment</span></a>
         </li>

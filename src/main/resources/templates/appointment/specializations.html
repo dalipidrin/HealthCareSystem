@@ -1,25 +1,3 @@
-<!--<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Home</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
-</head>
-<body>
-<div class="container">
-    <h2>Hi <span th:utext="${userName}"></span>, this is the home page.</h2>
-  &lt;!&ndash;  <a th:href="@{/patientData}">Fill your personal data</a><br>&ndash;&gt;
-  &lt;!&ndash;  <a href="http://localhost:8081/patientData">Fill your personal data</a>&ndash;&gt;
-    <a th:href="@{/patientData}">Fill your personal data</a><br>
-    <a th:href="@{/listOfDoctors}">Create appointment</a><br>
-    <a th:href="@{/patientAppointments}">My appointments</a><br>
-    <a th:href="@{/logout}">Sign out</a>
-</div>
-</body>
-</html>-->
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -33,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Health Care</title>
+    <title>Reparts</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../static/vendor/fontawesome-free/css/all.min.css"  th:href="@{/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css"/>
@@ -41,6 +19,82 @@
 
     <!-- Custom styles for this template-->
     <link href="../../static/css/sb-admin-2.min.css"  th:href="@{/css/sb-admin-2.min.css}" rel="stylesheet"/>
+
+    <style>
+
+        .scale-in-center{
+            width: 130px;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            margin:20px;
+            box-shadow: 5px 5px 20px;
+            transition: 0.70s;
+
+
+        }
+
+        .scale-in-center:hover{
+            transition: 0.70s;
+            transform: rotate(10deg);
+        }
+
+
+
+        .container-specialization-child1{
+
+            flex: 80%;
+            background-color: #b224ef;
+        }
+        .container-specialization-child2{
+            padding: 5px;
+            flex: 20%;
+            background-color: #b224ef;
+            text-align: center
+        }
+        .specialization-img-container{
+            width: 60%;
+            height: 60%;
+            margin-left: 20%;
+            margin-top: 12%;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+        }
+
+        .specialization-img-container img{
+            margin-top: 14%;
+            margin-left: 18%;
+            width: 60%;
+            height: 60%;
+        }
+
+        .specialization-links{
+            /*margin: 40px;*/
+            color: white;
+            text-decoration: none;
+        }
+
+        .specialization-links:hover{
+            text-decoration: none;
+        }
+
+        .container-specialization-boxes{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+
+        .scale-in-center{-webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both}
+
+        @-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}
+
+
+
+
+
+    </style>
 
 </head>
 
@@ -363,46 +417,212 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <h2>Reparts</h2>
-                    <div>
-                        <a href="/listCardiologs">Cardiologs</a>
+                <h2 style="margin-left: 20px;">Reparts</h2>
+                <div class="container-specialization-boxes">
+<!--                <h2>Reparts</h2>-->
+<!--                    <div>-->
+<!--                        <a href="/listCardiologs">Cardiologs</a>-->
+<!--                    </div>-->
+<!--                <div>-->
+<!--                    <a href="/listDermatology">Dermatology</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listNeurology">Neurology</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listObsterics">Obsterics</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listOncology">Oncology</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listOphthalmology">Ophthalmology</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listOrthopedics">Orthopedics</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listPediatrics">Pediatrics</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listPlasticSurgery">Plastic Surgery</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listPsychiatry">Psychiatry</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listRadiology">Radiology</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listStomatology">Stomatology</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a href="/listVirology">Virology</a>-->
+<!--                </div>-->
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/cardiologs.png}"/>
+                        </div>
                     </div>
-                <div>
-                    <a href="/listDermatology">Dermatology</a>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listCardiologs">Cardiologs</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listNeurology">Neurology</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/neurology.png}"/>
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listNeurology">Neurology</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listObsterics">Obsterics</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/psychiatry.png}"/>
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listObsterics">Obsterics</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listOncology">Oncology</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/oncology.png}"/>
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listOncology">Oncology</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listOphthalmology">Ophthalmology</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/ophtamology.png}"/>
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listOphthalmology">Ophthalmology</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listOrthopedics">Orthopedics</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/orthoped.png}"/>
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listOrthopedics">Orthopedics</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listPediatrics">Pediatrics</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/pedatrics.png}"/>
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listPediatrics">Pediatrics</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listPlasticSurgery">Plastic Surgery</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/plastic.png}"/>
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listPlasticSurgery">Plastic Surgery</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listPsychiatry">Psychiatry</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/psychiatry.png}"/>
+
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listPsychiatry">Psychiatry</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listRadiology">Radiology</a>
+                <div class="scale-in-center">
+                    <div class="container-specialization-child1">
+                        <div class="specialization-img-container">
+                            <img  th:src="@{/images/radiology.png}"/>
+                        </div>
+                    </div>
+                    <div class="container-specialization-child2">
+                        <a class="specialization-links" href="/listRadiology">Radiology</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="/listStomatology">Stomatology</a>
+
+                    <div class="scale-in-center">
+                        <div class="container-specialization-child1">
+                            <div class="specialization-img-container">
+                                <img  th:src="@{/images/stomatology.png}"/>
+                            </div>
+                        </div>
+                        <div class="container-specialization-child2">
+                            <a class="specialization-links" href="/listStomatology">Stomatology</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="scale-in-center">
+                        <div class="container-specialization-child1">
+                            <div class="specialization-img-container">
+                                <img  th:src="@{/images/stomatology.png}"/>
+                            </div>
+                        </div>
+                        <div class="container-specialization-child2">
+                            <a  class="specialization-links" href="/listVirology">Virology</a>
+                        </div>
+
+                    </div>
+
+                    <div class="scale-in-center">
+                        <div class="container-specialization-child1">
+                            <div class="specialization-img-container">
+                                <img  th:src="@{/images/stomatology.png}"/>
+                            </div>
+                        </div>
+                        <div class="container-specialization-child2">
+                            <a  class="specialization-links" href="/listVirology">Virology</a>
+                        </div>
+
+                    </div>
+                    <div class="scale-in-center">
+                        <div class="container-specialization-child1">
+                            <div class="specialization-img-container">
+                                <img  th:src="@{/images/stomatology.png}"/>
+                            </div>
+                        </div>
+                        <div class="container-specialization-child2">
+                            <a  class="specialization-links" href="/listVirology">Virology</a>
+                        </div>
+
+                    </div>
+
+
                 </div>
-                <div>
-                    <a href="/listVirology">Virology</a>
-                </div>
+
+
             </div>
             <!-- /.container-fluid -->
 

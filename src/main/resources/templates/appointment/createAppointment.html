@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Health Care</title>
+    <title>Book Appointment</title>
 
 
 
@@ -368,7 +368,7 @@
                           </select>-->
                         <div class="form-group">
                             <label >Date:</label>
-                            <input type="date" th:field="*{date}"th:attr="min=${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" class="form-control">
+                            <input type="date" id="date" th:field="*{date}"th:attr="min=${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" class="form-control">
                             <span style="color:purple; "th:if="${#fields.hasErrors('date')}" th:errors="*{date}">Date Error</span>
                         </div>
                         <div class="form-group">
@@ -406,7 +406,7 @@
 
 
                         <tr>
-                            <td colspan="2"><button type="submit" style="display: block; width: 100%;" class="btn btn-primary">Save</button> </td></td>
+                            <td colspan="2"><button id="saveAppointment" type="submit" style="display: block; width: 100%;" class="btn btn-primary">Save</button> </td></td>
                         </tr>
 
                     </form>

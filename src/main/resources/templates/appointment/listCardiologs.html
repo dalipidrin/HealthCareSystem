@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Health Care</title>
+    <title>Cardiologists</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../static/vendor/fontawesome-free/css/all.min.css"  th:href="@{/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css"/>
@@ -383,7 +383,7 @@
 
                                 <!--                                <a th:href="@{'/createAppointment/' + ${doctor.iddoctor}}'">Reserve</a>-->
 
-                                <a th:href="@{/createAppointment/} + ${doctor.iddoctor}"><img style="width: 40px;height: 40px;"  th:src="@{/images/bookIcon.png}"/></a>
+                                <a class="cardiologist-book-appointment" th:href="@{/createAppointment/} + ${doctor.iddoctor}"><img style="width: 40px;height: 40px;"  th:src="@{/images/bookIcon.png}"/></a>
 
 
                             </td>
